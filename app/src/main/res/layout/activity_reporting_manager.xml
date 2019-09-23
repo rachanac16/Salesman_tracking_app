@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_reporting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="54dp">
+
+
+        <LinearLayout
+            android:id="@+id/llcontent_reporting_manager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:elevation="2dp"
+                android:background="#fff"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llmy_activity"
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llmy_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/my_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="My Activity"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"
+                            android:layout_weight="12"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/my_assigned_zone"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zone"
+                            android:textColor="@color/common_google_signin_btn_text_light_default"
+                            android:textSize="14dp"
+                            android:lineSpacingExtra="3dp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llview_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="View Activity"
+                            android:textAllCaps="false"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:id="@+id/btn_view_activity"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/common_google_signin_btn_text_dark_disabled"/>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="2dp"
+                            android:layout_height="match_parent"
+                            android:text="View Attendance"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"
+                            android:id="@+id/btn_view_attendance"
+                            android:background="@color/common_google_signin_btn_text_dark_disabled"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/visit_viewpager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/drawer_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <include
+            layout="@layout/app_bar_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include layout="@layout/activity_footer"/>
+
+
+    </RelativeLayout>
+
+
+
+
+    <!-- stuff inside layout -->
+
+    <Button
+        android:id="@+id/fab_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/option_inflate"
+        android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

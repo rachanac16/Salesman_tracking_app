@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "38843695798",
+    "firebase_url": "https://myapplication5-5.firebaseio.com",
+    "project_id": "myapplication5-5",
+    "storage_bucket": "myapplication5-5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38843695798:android:45da3ee23170aa4b",
+        "android_client_info": {
+          "package_name": "com.eat.erp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38843695798-vm4lk30d35pfmgd3ar5bnvdhcocqq7r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eat.erp",
+            "certificate_hash": "1945c1a16841012839988a3c8e6e6ab036ae5e84"
+          }
+        },
+        {
+          "client_id": "38843695798-15jvn1efaq9i4vmb64aqhcmu2krrebm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCcoQol99sxeMC-NNDUDbr5rQ5hDwY1lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38843695798-15jvn1efaq9i4vmb64aqhcmu2krrebm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

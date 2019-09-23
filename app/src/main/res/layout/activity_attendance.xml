@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_attend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".AttendanceActivity">
+
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="90dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+                
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calendar_view"
+                    app:currentDayOfMonthColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:elevation="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="2dp"
+                    >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round1"
+                            android:text="0"
+                            android:id="@+id/no_present"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="0.8"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="2dp"
+                        android:text="Present"
+                        android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/absent_bg"
+                            android:text="0"
+                            android:id="@+id/no_absent"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Absent"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="0.8"
+                            android:textSize="13dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/late_bg"
+                            android:text="0"
+                            android:id="@+id/no_late"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Late"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:textSize="13dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:layout_gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llevent_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="2dp"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="2dp"
+        android:paddingTop="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lbl_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="DATE"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/txt_date_current"
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="-"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lbl_checkin_time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Checkin Time"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/txt_checkin_attend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="-"/>
+
+            <ImageView
+                android:id="@+id/checkin_loc"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"
+                android:src="@drawable/option_old_visit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+            <TextView
+                android:id="@+id/lbl_checkout_time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Checkout Time"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/txt_checkout_attend"
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="-"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/visit_viewpager"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </LinearLayout>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/drawer_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+                <include
+                    layout="@layout/app_bar_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+                <include layout="@layout/activity_footer"/>
+
+
+        </RelativeLayout>
+
+
+
+
+        <!-- stuff inside layout -->
+
+        <Button
+            android:id="@+id/fab_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/option_inflate"
+            android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>
